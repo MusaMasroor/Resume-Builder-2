@@ -8,7 +8,13 @@ dotenv.config({ path: "./config.env" });
 
 const port = process.env.PORT || 5001;
 
-app.use(cors());
+// Set up CORS with specific origin
+const corsOptions = {
+  origin: "https://euphonious-brigadeiros-4d0865.netlify.app/",
+  credentials: true, // Enable credentials (cookies)
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use(require("./routes/auth"));
