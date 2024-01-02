@@ -14,17 +14,20 @@ const Signup = () => {
   const postData = async (e) => {
     e.preventDefault();
     const { name, email, phoneNumber, password, cPassword } = resumeContent;
-    const res = await fetch("/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        phoneNumber: phoneNumber,
-        password: password,
-        cPassword: cPassword,
-      }),
-    });
+    const res = await fetch(
+      "https://resume-builder-backend-lgtx.onrender.com/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phoneNumber: phoneNumber,
+          password: password,
+          cPassword: cPassword,
+        }),
+      }
+    );
 
     if (res.status === 409) {
       const errorData = await res.json();

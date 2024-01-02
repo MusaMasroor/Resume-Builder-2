@@ -9,14 +9,17 @@ const Template = () => {
   const navigate = useNavigate();
   const callTemplate = async () => {
     try {
-      const res = await fetch("/template", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        "https://resume-builder-backend-lgtx.onrender.com/template",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       if (res.status === 200) {
         const responseData = await res.json();

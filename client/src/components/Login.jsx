@@ -13,16 +13,19 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     const { email, password } = resumeContent;
-    const res = await fetch("/signin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    });
+    const res = await fetch(
+      "https://resume-builder-backend-lgtx.onrender.com/signin",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      }
+    );
 
     if (res.status === 400) {
       const errorData = await res.json();
