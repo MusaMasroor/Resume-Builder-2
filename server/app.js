@@ -10,7 +10,7 @@ const port = process.env.PORT || 5001;
 
 // Set up CORS with specific origin
 const corsOptions = {
-  origin: "https://euphonious-brigadeiros-4d0865.netlify.app/",
+  origin: "*",
   credentials: true, // Enable credentials (cookies)
 };
 
