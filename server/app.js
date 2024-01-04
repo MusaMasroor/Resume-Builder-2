@@ -12,8 +12,16 @@ app.use(
   cors({
     origin: "https://gilded-haupia-740589.netlify.app/",
     credentials: true,
+    allowedHeaders: "Content-Type, Authorization",
+    methods: "GET, POST, PUT, DELETE",
   })
 );
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//   res.header("Access-Control-Allow-Credentials", true);
+//   console.log("Headers Set:", res.getHeaders());
+//   next();
+// });
 app.use(express.json());
 app.use(cookieParser());
 app.use(require("./routes/auth"));
