@@ -1,0 +1,14 @@
+[[redirects]]
+from = "/template"
+to = "https://resume-builder-backend-lgtx.onrender.com/template"
+status = 200
+
+[[redirects]]
+from = "/register"
+to = "https://resume-builder-backend-lgtx.onrender.com/register"
+status = 200
+
+[[redirects]]
+from = "/signin"
+to = "https://resume-builder-backend-lgtx.onrender.com/signin"
+status = 200
