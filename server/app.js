@@ -11,6 +11,7 @@ const port = process.env.PORT || 5001;
 app.use(
   cors({
     origin: "https://gilded-haupia-740589.netlify.app/",
+    credentials: true,
   })
 );
 app.use(express.json());
