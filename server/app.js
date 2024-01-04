@@ -16,12 +16,15 @@ app.use(
     methods: "GET, POST, PUT, DELETE",
   })
 );
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-//   res.header("Access-Control-Allow-Credentials", true);
-//   console.log("Headers Set:", res.getHeaders());
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://gilded-haupia-740589.netlify.app/"
+  );
+  res.header("Access-Control-Allow-Credentials", true);
+  console.log("Headers Set:", res.getHeaders());
+  next();
+});
 app.use(express.json());
 app.use(cookieParser());
 app.use(require("./routes/auth"));
