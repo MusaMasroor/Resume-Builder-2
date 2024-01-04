@@ -8,7 +8,11 @@ dotenv.config({ path: "./config.env" });
 
 const port = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://gilded-haupia-740589.netlify.app/",
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(require("./routes/auth"));
