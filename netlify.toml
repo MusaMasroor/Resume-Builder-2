@@ -3,4 +3,4 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "https://app.netlify.com/sites/benevolent-baklava-4572df"
+    Access-Control-Allow-Origin = "https://benevolent-baklava-4572df.netlify.app"
