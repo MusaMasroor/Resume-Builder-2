@@ -10,7 +10,7 @@ const port = process.env.PORT || 5001;
 
 app.use(
   cors({
-    origin: "https://gilded-haupia-740589.netlify.app/",
+    origin: "https://gilded-haupia-740589.netlify.app",
     credentials: true,
     allowedHeaders: "Content-Type, Authorization",
     methods: "GET, POST, PUT, DELETE",
@@ -19,9 +19,10 @@ app.use(
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://gilded-haupia-740589.netlify.app/"
+    "https://gilded-haupia-740589.netlify.app"
   );
   res.header("Access-Control-Allow-Credentials", true);
+  console.log("Incoming Request:", req.method, req.url);
   console.log("Headers Set:", res.getHeaders());
   next();
 });

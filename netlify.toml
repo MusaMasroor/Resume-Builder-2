@@ -1,0 +1,6 @@
+
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "https://gilded-haupia-740589.netlify.app"
